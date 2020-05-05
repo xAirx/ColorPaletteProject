@@ -1,5 +1,5 @@
+/* eslint-disable react/prop-types */
 import React, { Component } from 'react';
-import styled from 'styled-components';
 
 export class ColorBox extends Component {
   constructor(props) {
@@ -13,13 +13,13 @@ export class ColorBox extends Component {
 
     return (
       <div style={{ background }} className="ColorBox">
-        {/*                 //// The button which will display more colorboxes eventually
-         */}
         <div className="copy-container">
           <div className="box-content">
             <span>{name}</span>
           </div>
-          <button className="copy-button">Copy</button>
+          <button type="button" className="copy-button">
+            Copy
+          </button>
         </div>
         <span className="see-more">More</span>
       </div>
