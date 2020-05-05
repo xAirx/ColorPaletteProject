@@ -1,7 +1,6 @@
-import Palette from './Palette';
 import React,{Component} from 'react'
 import seedColors from './seedColors';
-
+import Palette from './Palette';
 class  App extends Component {
   render() {
 
@@ -10,7 +9,9 @@ class  App extends Component {
 
   return (
     <div className="App">
-      <Palette palette={seedColors[4]}/>
+     {/*  <Palette palette={seedColors[4]}/> */}
+     {/*/Passing in our props from seedColors individually.*/}
+     <Palette {...seedColors[4]}/>
     </div>
   );
  }
