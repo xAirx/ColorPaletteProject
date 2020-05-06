@@ -2,7 +2,6 @@
 /* eslint-disable import/no-named-as-default */
 import React, { Component } from 'react';
 import ColorBox from './ColorBox';
-import './ColorBox.css';
 import './Palette.css';
 
 export class Palette extends Component {

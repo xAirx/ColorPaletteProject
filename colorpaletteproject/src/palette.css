@@ -1,11 +1,6 @@
 .Palette {
-    /*     This makes the veiewport height a 100% for this div so it fills the entire page
- */
-    height: 100vh;
+  height: 100vh;
 }
-
 .Palette-colors {
-    /*     This is 90% of its parent which is a 100% viewheight which makes the boxes span across the page
- */
-    height: 90%;
+  height: 90%;
 }
