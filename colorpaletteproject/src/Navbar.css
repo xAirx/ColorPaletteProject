@@ -1,0 +1,115 @@
+/* //////////// Slider css  */
+
+.Navbar {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  box-shadow: 0 13px 38px rgba(0, 0, 0, 0.3), 0 5px 12px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+.slider {
+  width: 265px;
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.slider-container span {
+  font-size: 11px;
+  letter-spacing: 2px;
+  line-height: 20px;
+}
+
+.rc-slider {
+  position: relative;
+  height: 14px;
+  padding: 6px 0;
+  width: 100%;
+  border-radius: 6px;
+  touch-action: none;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+@keyframes rainbow_animation {
+  0%,
+  100% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 100% 0;
+  }
+}
+
+.slider .rc-slider-handle,
+.slider .rc-slider-handle :active,
+.slider .rc-slider-handle :hover,
+.slider .rc-slider-handle :focus {
+  outline: none;
+  box-shadow: none;
+  margin-left: -7px;
+  margin-top: -3px;
+  background: linear-gradient(
+    to right,
+    #6666ff,
+    #0099ff,
+    #00ff00,
+    #ff3399,
+    #6666ff
+  );
+
+  color: transparent;
+  animation: rainbow_animation 5s ease-in-out infinite;
+  background-size: 400% 100%;
+  transition: 0.1s;
+}
+
+.slider .rc-slider-track {
+  background-color: transparent;
+}
+
+.slider .rc-slider-rail {
+  height: 8px;
+}
+
+.Navbar {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  background: transparent;
+  padding: 12px;
+  flex-wrap: wrap;
+}
+
+.logo:hover {
+  background: linear-gradient(
+    to right,
+    #6666ff,
+    #0099ff,
+    #00ff00,
+    #ff3399,
+    #6666ff
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow_animation 6s ease-in-out infinite;
+  background-size: 400% 100%;
+  transition: 2s;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

@@ -6,9 +6,8 @@
 /* eslint-disable array-callback-return */
 import React, { Component } from 'react';
 import ColorBox from './ColorBox';
+import Navbar from './Navbar';
 import './Palette.css';
-import Slider from 'rc-slider';
-import 'rc-slider/assets/index.css';
 
 export class Palette extends Component {
   constructor(props) {
@@ -47,11 +46,8 @@ export class Palette extends Component {
         // along with calling a function afterchange, step is added in to ensure that we step in 100's else our application
         // wont work. */}
 
-        <Slider defaultValue={this.state.level} min={100} max={900} step={100} onAfterChange={this.changeLevel} />
-
-        {/*  navbar goes here */}
+        <Navbar level={this.state.level} changeLevel={this.changeLevel} />
         <div className="Palette-colors">
-          {/* bunch of color boxes */}
           {/* colorBoxes */}
           {colorBoxes}
         </div>
