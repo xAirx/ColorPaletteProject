@@ -15,7 +15,8 @@ class App extends Component {
         {/*  <Palette palette={seedColors[4]}/> */}
         {/* /Passing in our props from seedColors
         individually. */}
-        <Palette {...seedColors[4]} />
+        {/* <Palette {...seedColors[4]} /> */}
+        <Palette palette={generatePalette(seedColors[4])} />
       </div>
     );
   }
