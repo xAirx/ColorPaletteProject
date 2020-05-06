@@ -26,8 +26,8 @@
   opacity: 0;
 }
 .see-more {
-  width: 61px;
-  height: 29px;
+  width: 60px;
+  height: 30px;
   position: absolute;
   display: inline-block;
   bottom: 0%;
@@ -39,7 +39,7 @@
   color: white;
   text-transform: uppercase;
   border: none;
-  line-height: 26px;
+  line-height: 30px;
 }
 
 .ColorBox:hover .copy-button {
