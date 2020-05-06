@@ -1,3 +1,4 @@
+/* eslint-disable class-methods-use-this */
 /* eslint-disable import/order */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/prop-types */
@@ -15,10 +16,15 @@ export class Palette extends Component {
 
     this.state = { level: 500 };
     this.changeLevel = this.changeLevel.bind(this);
+    this.changeFormat = this.changeFormat.bind(this);
   }
 
   changeLevel(newLevel) {
     this.setState({ level: newLevel });
+  }
+
+  changeFormat(e) {
+    alert(e.target.value);
   }
 
   render() {
@@ -46,7 +52,7 @@ export class Palette extends Component {
         // along with calling a function afterchange, step is added in to ensure that we step in 100's else our application
         // wont work. */}
 
-        <Navbar level={this.state.level} changeLevel={this.changeLevel} />
+        <Navbar handleChange={this.changeFormat} level={this.state.level} changeLevel={this.changeLevel} />
         <div className="Palette-colors">
           {/* colorBoxes */}
           {colorBoxes}

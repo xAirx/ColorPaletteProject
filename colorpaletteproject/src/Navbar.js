@@ -7,6 +7,7 @@ import React, { Component } from 'react';
 import 'rc-slider/assets/index.css';
 import Slider from 'rc-slider';
 import './Navbar.css';
+import { Select, MenuItem } from '@material-ui/core';
 
 export class Navbar extends Component {
   render() {
@@ -29,6 +30,13 @@ export class Navbar extends Component {
               onAfterChange={this.props.changeLevel}
             />
           </div>
+        </div>
+        <div className="SelectContainer">
+          <Select onChange={this.props.handleChange}>
+            <MenuItem value="hex">HEX - #ffff</MenuItem>
+            <MenuItem value="rgb">RGB - RGB(255.255.255.0)</MenuItem>
+            <MenuItem value="rgba">RGBA -RGBA(255.255.255.0)</MenuItem>
+          </Select>
         </div>
       </header>
     );
