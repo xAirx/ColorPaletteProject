@@ -387,3 +387,34 @@ a {
   letter-spacing: 3px;
   font-size: 11px;
 }
+
+///////////// ///////////// Palettelist & Minipalette ///////////// ///////////// /////////////
+///////////// ///////////// ///////////// ///////////// ///////////// /////////////
+
+.palette-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  height: 92vh;
+}
+
+.minibox {
+  height: 10px;
+  width: 20%;
+  display: inline-block;
+  margin: 0 auto;
+  position: relative;
+}
+.minipalette-title {
+  margin-bottom: 2%;
+}
+
+.miniColor {
+  width: 87%;
+  display: inline-block;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 10px;
+}

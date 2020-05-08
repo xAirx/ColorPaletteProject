@@ -1,40 +1,37 @@
-/* eslint-disable no-unused-expressions */
 /* eslint-disable import/no-named-as-default */
+/* eslint-disable class-methods-use-this */
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
-import seedColors from './seedColors';
+import { Route, Switch, Link } from 'react-router-dom';
 import Palette from './Palette';
-import './component.scss';
+import seedColors from './seedColors';
 import { generatePalette } from './colorHelpers';
+import './component.scss';
+import PaletteList from './palettelist';
 
 class App extends Component {
+  findPalette(id) {
+    return seedColors.find(function(palette) {
+      return palette.id === id;
+    });
+  }
+
   render() {
-    console.log('GENERATED PALETTE', generatePalette(seedColors[4]));
-    /* const seedcolors = [] */
-
     return (
-      <>
-        <Switch>
-          <Route
-            exact
-            path="/"
-            render={() => {
-              <h1>ColorPaletteProject</h1>;
-            }}
-          />
-          <Route
-            exact
-            path="/palette/:id"
-            render={() => {
-              <h1>Individual Palette</h1>;
-            }}
-          />
-        </Switch>
+      <Switch>
+        <Route exact path="/" render={() => <PaletteList palettes={seedColors} />} />
+        <Route
+          exact
+          path="/palette/:id"
+          /* We run generate palette on our findPalette function, we take the ID from the URL
+          then we pass that into generatePalette which then maps the id within our new palette object, in
+          colorHelpers.js and then returns the correct palette to the component as the palette prop */
+          render={routeProps => <Palette palette={generatePalette(this.findPalette(routeProps.match.params.id))} />}
+        />
+      </Switch>
 
-        {/*  <div className="App">
-          <Palette palette={generatePalette(seedColors[4])} />
-        </div> */}
-      </>
+      // <div>
+      //   <Palette palette={generatePalette(seedColors[4])} />
+      // </div>
     );
   }
 }
