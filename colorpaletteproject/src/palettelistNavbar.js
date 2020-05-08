@@ -12,8 +12,8 @@ import './component.scss';
 export class palettelistNavbar extends Component {
   render() {
     return (
-      <header className="Navbar">
-        <div className="logo ">
+      <header className="paletteNavbar">
+        <div className="paletteListLogo ">
           <a className="rainbow rainbow_text_animated" href="#">
             ColorPaletteProject
           </a>
