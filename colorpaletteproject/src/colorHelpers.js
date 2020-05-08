@@ -82,7 +82,7 @@ function generatePalette(starterPalette) {
         rgb: chroma(scale[i]).css(),
         rgba: chroma(scale[i])
           .css()
-          .replace('rgba', 'rgba')
+          .replace('rgb', 'rgba')
           .replace(')', ',1.0)'),
       });
     }

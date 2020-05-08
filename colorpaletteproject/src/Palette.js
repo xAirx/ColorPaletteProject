@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unused-state */
 /* eslint-disable class-methods-use-this */
 /* eslint-disable import/order */
 /* eslint-disable react/destructuring-assignment */
@@ -8,13 +9,14 @@
 import React, { Component } from 'react';
 import ColorBox from './ColorBox';
 import Navbar from './Navbar';
-import './Palette.css';
+import Footer from './Footer';
+import './component.scss';
 
 export class Palette extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { level: 500 };
+    this.state = { level: 500, format: 'hex' };
     this.changeLevel = this.changeLevel.bind(this);
     this.changeFormat = this.changeFormat.bind(this);
   }
@@ -23,8 +25,11 @@ export class Palette extends Component {
     this.setState({ level: newLevel });
   }
 
-  changeFormat(e) {
-    alert(e.target.value);
+  changeFormat(val) {
+    /*  alert(val); */
+    this.setState({ format: val }, () => {
+      console.log('Successfully set state', this.state.format);
+    });
   }
 
   render() {
@@ -40,10 +45,10 @@ export class Palette extends Component {
     // Corresponding colors.
 
     const { colors } = this.props.palette;
-    const { level } = this.state;
+    const { level, format } = this.state;
 
     const colorBoxes = colors[level].map(function(color) {
-      return <ColorBox background={color.hex} name={color.name} />;
+      return <ColorBox background={color[format]} name={color.name} />;
     });
 
     return (
@@ -52,12 +57,12 @@ export class Palette extends Component {
         // along with calling a function afterchange, step is added in to ensure that we step in 100's else our application
         // wont work. */}
 
-        <Navbar handleChange={this.changeFormat} level={this.state.level} changeLevel={this.changeLevel} />
+        <Navbar handleChange={this.changeFormat} level={level} changeLevel={this.changeLevel} />
         <div className="Palette-colors">
           {/* colorBoxes */}
           {colorBoxes}
         </div>
-        {/* Footer eventually */}
+        <Footer />
       </div>
     );
   }
