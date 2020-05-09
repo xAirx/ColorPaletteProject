@@ -11,11 +11,12 @@ export class palettelist extends Component {
     console.log(palettes);
 
     const mappedPalettes = palettes.map(palette => (
-      <div className="miniColor" style={{ color: palette.colors }} key={palette.name}>
+      <div className="Minibox" style={{ color: palette.colors }} key={palette.name}>
         <Link to={`/palette/${palette.id}`}>
           <div className="minipalette-title">{palette.paletteName}</div>
+
           {palette.colors.map(singlecolor => (
-            <div className="minibox" style={{ backgroundColor: singlecolor.color }}></div>
+            <div className="Minicolor" style={{ backgroundColor: singlecolor.color }}></div>
           ))}
         </Link>
       </div>
