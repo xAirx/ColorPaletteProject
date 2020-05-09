@@ -423,7 +423,7 @@ a {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  animation: rainbow_animation 15 ease-in-out infinite;
+  animation: rainbow_animation 10s ease-in-out infinite;
   background-size: 400% 100%;
   /* transition: 10s; */
   margin: 0 auto;
@@ -432,24 +432,6 @@ a {
   margin-top: 30px;
   height: 4vh;
   font-size: 1rem;
-}
-
-.palette-wrapper {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-  height: 91vh;
-  flex-wrap: wrap;
-}
-
-.minibox {
-  height: 38px;
-  width: 30%;
-  display: inline-block;
-  margin: 0 auto;
-  position: relative;
-  box-shadow: 0 50px 10px rgba(0, 0, 0, 0.3), 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 .minipalette-title {
@@ -470,7 +452,7 @@ a {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  animation: rainbow_animation 15 ease-in-out infinite;
+  animation: rainbow_animation 14s ease-in-out infinite;
   background-size: 400% 100%;
   /* transition: 10s; */
   margin: 0 auto;
@@ -478,8 +460,26 @@ a {
   margin-bottom: 10px;
 }
 
+.palette-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  height: 91vh;
+  flex-wrap: wrap;
+}
+
+.minibox {
+  height: 33px;
+  width: 26%;
+  display: inline-block;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: 0 20px 9px rgba(0, 0, 0, 0.3), 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
 .miniColor {
   width: 33%;
   display: inline-block;
-  margin-bottom: 4%;
+  margin-bottom: 3%;
 }
