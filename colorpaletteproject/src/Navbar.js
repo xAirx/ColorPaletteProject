@@ -15,53 +15,64 @@ import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import { Link } from 'react-router-dom';
 
-export class Navbar extends Component {
+class Navbar extends Component {
   constructor(props) {
     super(props);
     this.state = { format: 'hex', open: false };
     this.handleFormatChange = this.handleFormatChange.bind(this);
-    this.handleClose = this.handleClose.bind(this);
+    this.closeSnackbar = this.closeSnackbar.bind(this);
   }
 
-  handleClose = () => {
-    this.setState({ open: false });
-  };
-
+  // / Here we handle the formatchange within the navbarcomponent,
+  // / Based on what is set in the select component below, we wset the state as event target value, the open state also plays in with the snackbar showing or not.
   handleFormatChange(e) {
     this.setState({ format: e.target.value, open: true });
     this.props.handleChange(e.target.value);
   }
 
+  closeSnackbar() {
+    this.setState({ open: false });
+  }
+
   render() {
-    const { level, changeLevel } = this.props;
+    const { level, changeLevel, showingAllColors, showingFrontpage, showingPalette } = this.props;
     const { format } = this.state;
 
     return (
       <header className="Navbar">
-        <div className="logo ">
-          <Link exact to="/">
-            <a className="rainbow rainbow_text_animated" href="#">
-              ColorPaletteProject
-            </a>
-          </Link>
+        <div className="logo">
+          <Link to="/">ReactColorPicker Project</Link>
         </div>
-
-        <div className="slider-container">
-          <span>Level - {level} </span>
-          <div className="slider">
-            <Slider defaultValue={level} min={100} max={900} step={100} onAfterChange={changeLevel} />
+        {/*         // Logic to show differnet pieces of the navbar based on which component you are in,
+        props are passed as boolean values from the differnt components in question */}
+        {showingAllColors && (
+          <div className="slider-container">
+            <span>Level: {level}</span>
+            <div className="slider">
+              <Slider defaultValue={level} min={100} max={900} step={100} onAfterChange={changeLevel} />
+            </div>
           </div>
-        </div>
-        <div className="SelectContainer">
-          {/* This.handleChange references the components
-          constructor context the handlechange in this component
-          specifically */}
-          <Select value={format} onChange={this.handleFormatChange}>
-            <MenuItem value="hex">HEX - #ffff</MenuItem>
-            <MenuItem value="rgba">RGBA -RGBA(255.255.255.0)</MenuItem>
-            <MenuItem value="rgb">RGB - RGB(255.255.255.0)</MenuItem>
-          </Select>
-        </div>
+        )}
+        {showingFrontpage && (
+          <div className="select-container">
+            <Select value={format} onChange={this.handleFormatChange}>
+              <MenuItem value="hex">HEX - #ffffff</MenuItem>
+              <MenuItem value="rgb">RGB - rgb(255,255,255)</MenuItem>
+              <MenuItem value="rgba">RGBA - rgba(255,255,255, 1.0)</MenuItem>
+            </Select>
+          </div>
+        )}
+        {showingPalette && (
+          <div className="select-container">
+            <Select value={format} onChange={this.handleFormatChange}>
+              <MenuItem value="hex">HEX - #ffffff</MenuItem>
+              <MenuItem value="rgb">RGB - rgb(255,255,255)</MenuItem>
+              <MenuItem value="rgba">RGBA - rgba(255,255,255, 1.0)</MenuItem>
+            </Select>
+          </div>
+        )}
+        {/*           // Snackbar component
+         */}
         <Snackbar
           anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
           open={this.state.open}
@@ -70,9 +81,9 @@ export class Navbar extends Component {
           ContentProps={{
             'aria-describedby': 'message-id',
           }}
-          onClose={this.handleClose}
+          onClose={this.closeSnackbar}
           action={[
-            <IconButton onClick={this.handleClose} color="inherit" key="close" aria-label="close">
+            <IconButton onClick={this.closeSnackbar} color="inherit" key="close" aria-label="close">
               <CloseIcon />
             </IconButton>,
           ]}
@@ -81,5 +92,4 @@ export class Navbar extends Component {
     );
   }
 }
-
 export default Navbar;

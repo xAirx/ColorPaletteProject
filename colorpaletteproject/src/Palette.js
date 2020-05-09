@@ -1,72 +1,60 @@
-/* eslint-disable react/jsx-no-duplicate-props */
-/* eslint-disable react/no-unused-state */
-/* eslint-disable class-methods-use-this */
-/* eslint-disable import/order */
+/* eslint-disable import/no-named-as-default */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/prop-types */
-/* eslint-disable import/no-named-as-default */
-/* eslint-disable no-unused-expressions */
-/* eslint-disable array-callback-return */
 import React, { Component } from 'react';
 import ColorBox from './ColorBox';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import './component.scss';
 
-export class Palette extends Component {
+class Palette extends Component {
   constructor(props) {
     super(props);
-
     this.state = { level: 500, format: 'hex' };
     this.changeLevel = this.changeLevel.bind(this);
     this.changeFormat = this.changeFormat.bind(this);
   }
 
-  changeLevel(newLevel) {
-    this.setState({ level: newLevel });
+  // / Here we are defining functions to change level of the color (color intensity), this method is passed
+  // To the navbar component which handles setting the level of the colors.
+  changeLevel(level) {
+    this.setState({ level });
   }
 
+  // / Here we are defining functions to change format of the color (color format), this method is passed
+  // To the navbar component which handles setting the format of the colors.
   changeFormat(val) {
-    /*  alert(val); */
-    this.setState({ format: val }, () => {
-      console.log('Successfully set state', this.state.format);
-    });
+    this.setState({ format: val });
   }
 
   render() {
-    console.log(this.state.level);
-    /*  const { colors } = this.props; */
-
-    /* const colorBoxes = this.props.colors.map(color => {
-             <ColorBox background={color.color} name={color.name}/>
-    }) */
-
-    // The new palette passed from app.js, from colorHelpers.js
-    // Has color values, from 50-900, picking one will display
-    // Corresponding colors.
-
-    const { colors } = this.props.palette;
+    const { colors, paletteName, emoji, id } = this.props.palette;
     const { level, format } = this.state;
 
-    const colorBoxes = colors[level].map(function(color) {
-      return <ColorBox background={color[format]} name={color.name} id={color.id} />;
-    });
-
+    // level is passed in here from state, and format too, used to render our color box by passing the values down as props
+    // The moreURL, is made to create an easy route through props.
+    const colorBoxes = colors[level].map(color => (
+      <ColorBox
+        background={color[format]}
+        name={color.name}
+        key={color.id}
+        moreUrl={`/palette/${id}/${color.id}`}
+        showLink
+      />
+    ));
     return (
       <div className="Palette">
-        {/* ///////// The slider component from the rc-slider library, takes a min max, defaultvalue
-        // along with calling a function afterchange, step is added in to ensure that we step in 100's else our application
-        // wont work. */}
-
-        <Navbar handleChange={this.changeFormat} level={level} changeLevel={this.changeLevel} />
-        <div className="Palette-colors">
-          {/* colorBoxes */}
-          {colorBoxes}
-        </div>
+        <Navbar
+          level={level}
+          changeLevel={this.changeLevel}
+          handleChange={this.changeFormat}
+          showingAllColors
+          showingPalette
+        />
+        <div className="Palette-colors">{colorBoxes}</div>
         <Footer />
       </div>
     );
   }
 }
-
 export default Palette;

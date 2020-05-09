@@ -1,7 +1,7 @@
 /* eslint-disable import/no-named-as-default */
 /* eslint-disable class-methods-use-this */
 import React, { Component } from 'react';
-import { Route, Switch, Link } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Palette from './Palette';
 import seedColors from './seedColors';
 import { generatePalette } from './colorHelpers';
@@ -20,7 +20,6 @@ class App extends Component {
     return (
       <Switch>
         <Route exact path="/" render={() => <PaletteList palettes={seedColors} />} />
-        <Route exact path="/singlepalette/" render={() => <SingleColorPalette />} />
         <Route
           exact
           path="/palette/:id"
@@ -28,6 +27,18 @@ class App extends Component {
           then we pass that into generatePalette which then maps the id within our new palette object, in
           colorHelpers.js and then returns the correct palette to the component as the palette prop */
           render={routeProps => <Palette palette={generatePalette(this.findPalette(routeProps.match.params.id))} />}
+        />
+        <Route
+          exact
+          path="/palette/:paletteId/:colorId"
+          /* THe singleColorPalette route is similar to the palette route, we are matching on differnet parameters
+          /* //also passing in a colorId, the colorId, and Palette id are used as part of the route definition to grab the correct palette. */
+          render={routeProps => (
+            <SingleColorPalette
+              colorId={routeProps.match.params.colorId}
+              palette={generatePalette(this.findPalette(routeProps.match.params.paletteId))}
+            />
+          )}
         />
       </Switch>
 
