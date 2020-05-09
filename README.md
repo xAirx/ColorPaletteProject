@@ -1,5 +1,13 @@
 # ColorPaletteProject
 
+
+     
+     
+     
+## Imagery - low quality (Giphy was not nice to the gifs, the app looks great.)
+
+
+![](https://media.giphy.com/media/WsXxS7rdFu1dy6VeHx/giphy.gif)
    ## App made in React 
 
     __________________________________
@@ -12,13 +20,6 @@
      
      While having a focus on design and responsiveness as well.
      
-     
-     
-     
-## Imagery - low quality (Giphy was not nice to the gifs, the app looks great.)
-
-
-![](https://media.giphy.com/media/WsXxS7rdFu1dy6VeHx/giphy.gif)
 ![](https://media.giphy.com/media/RlfCpLShOg8zSSOGzP/giphy.gif)
 ![](https://media.giphy.com/media/S57g4Ep9UmKe7aDl1Z/giphy.gif)
 ![](https://media.giphy.com/media/h6Z4z39pZEEFTwip2i/giphy.gif)
