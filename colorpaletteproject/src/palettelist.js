@@ -12,13 +12,14 @@ export class palettelist extends Component {
 
     const mappedPalettes = palettes.map(palette => (
       <div className="Minibox" style={{ color: palette.colors }} key={palette.name}>
-        <Link to={`/palette/${palette.id}`}>
-          <div className="minipalette-title">{palette.paletteName}</div>
-
+        <div className="MiniPalette-Title">
+          <Link to={`/palette/${palette.id}`}>{palette.paletteName} </Link>
+        </div>
+        <div className="MiniColorInnerWrapper">
           {palette.colors.map(singlecolor => (
-            <div className="Minicolor" style={{ backgroundColor: singlecolor.color }}></div>
+            <div className="Minicolor" style={{ height: '30px', backgroundColor: singlecolor.color }}></div>
           ))}
-        </Link>
+        </div>
       </div>
     ));
 
@@ -27,11 +28,13 @@ export class palettelist extends Component {
     return (
       <div className="Palette">
         <PalettelistNavbar />
-        <div className="palette-wrapper">
-          {mappedPalettes}
-          {/*  {palettes.map(palette => (
+        <div className="PaletteListWrapper">
+          <div className="Palette-Wrapper">
+            {mappedPalettes}
+            {/*  {palettes.map(palette => (
             <miniPalette {...palettes} />
           ))} */}
+          </div>
         </div>
         <Footer />
       </div>

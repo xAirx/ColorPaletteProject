@@ -1,7 +1,7 @@
 ///////////// ///////////// App  ///////////// ///////////// /////////////
 ///////////// ///////////// ///////////// ///////////// ///////////// /////////////
 .App {
-  text-align: center;
+  height: 100vh;
 }
 
 body {
@@ -425,16 +425,61 @@ a {
   color: transparent;
   animation: rainbow_animation 10s ease-in-out infinite;
   background-size: 400% 100%;
-  /* transition: 10s; */
+  transition: 10s;
   margin: 0 auto;
+  margin-top: 0px;
   position: absolute;
   left: 26px;
-  margin-top: 30px;
-  height: 4vh;
   font-size: 1rem;
 }
 
-.minipalette-title {
+.PaletteListWrapper {
+  width: 100%;
+  height: 91vh;
+}
+
+.Palette-Wrapper {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.Minibox {
+  width: 26%;
+  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.Minicolor {
+  /* box-shadow: 0 20px 9px rgba(0, 0, 0, 0.3), 0 5px 20px rgba(0, 0, 0, 0.1); */
+  height: 30px;
+  width: 30px;
+  background-color: rgb(244, 67, 54);
+}
+
+.MiniColorInnerWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* width: 33%; */
+  justify-content: center;
+  align-items: center;
+}
+
+.MiniPalette-Title {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
   background: linear-gradient(
     to right,
     #6666ff,
@@ -454,41 +499,9 @@ a {
   color: transparent;
   animation: rainbow_animation 14s ease-in-out infinite;
   background-size: 400% 100%;
-  /* transition: 10s; */
-  margin: 0 auto;
-  font-size: 1rem;
-  margin-bottom: 10px;
 }
-
-.palette-wrapper {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-  height: 91vh;
-  flex-wrap: wrap;
-  padding-left: 10px;
-  padding-right: 20px;
-}
-
-.Minicolor {
-  height: 33px;
-  width: 30%;
-  display: inline-block;
-  margin: 0 auto;
-  position: relative;
-  /* box-shadow: 0 20px 9px rgba(0, 0, 0, 0.3), 0 5px 20px rgba(0, 0, 0, 0.1); */
-}
-
-.Minibox {
-  width: 33%;
-  margin-bottom: 3%;
-  border-radius: 10px;
-  transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
 ////////////////// HOVER EFFECT ///////////
-
+/*
 .Minibox:hover {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -498,3 +511,4 @@ a {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   padding: 10px;
 }
+ */

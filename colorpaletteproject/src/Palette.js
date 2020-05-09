@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-duplicate-props */
 /* eslint-disable react/no-unused-state */
 /* eslint-disable class-methods-use-this */
 /* eslint-disable import/order */
@@ -48,7 +49,7 @@ export class Palette extends Component {
     const { level, format } = this.state;
 
     const colorBoxes = colors[level].map(function(color) {
-      return <ColorBox background={color[format]} name={color.name} />;
+      return <ColorBox background={color[format]} name={color.name} id={color.id} />;
     });
 
     return (
