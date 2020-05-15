@@ -43,15 +43,15 @@ class Palette extends Component {
       />
     ));
     return (
-      <div className="Palette">
-        <Navbar
-          level={level}
-          changeLevel={this.changeLevel}
-          handleChange={this.changeFormat}
-          showingAllColors
-          showingPalette
-        />
-        <div className="Palette-colors">{colorBoxes}</div>
+      <div className="SingleColorPalette Palette">
+        {/* // Here we pass down handlechange as we also need to change format of the colors in this component
+      The showingAllColors prop passed is a boolean to check wether or not we want to show the slider here.
+      instead of creating a new Navbar component specifically for this component we use conditional logic */}
+        <Navbar handleChange={this.changeFormat} showingAllColors showingPalette />
+        <div className="FirstPalette-colors">
+          {colorBoxes}
+          {/*  //// The go back colorbox */}
+        </div>
         <Footer />
       </div>
     );

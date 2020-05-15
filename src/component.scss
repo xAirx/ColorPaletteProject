@@ -1,3 +1,42 @@
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+// Small devices
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
 ///////////// ///////////// App  ///////////// ///////////// /////////////
 ///////////// ///////////// ///////////// ///////////// ///////////// /////////////
 .App {
@@ -60,20 +99,42 @@ code {
 ///////////// ///////////// COLOR BOX ///////////// ///////////// /////////////
 ///////////// ///////////// ///////////// ///////////// ///////////// /////////////
 .ColorBox {
-  width: 20%;
+  width: 25%;
   /*  height: 25%; */
   /* height: 12.5%; */
-  height: 25%;
   margin: 0 auto;
-  display: inline-block;
+
   position: relative;
   cursor: pointer;
-  margin-bottom: -3.5px;
+
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 2s; /* Firefox < 16 */
   -ms-animation: fadein 2s; /* Internet Explorer */
   -o-animation: fadein 2s; /* Opera < 12.1 */
   animation: fadein 2s;
+  @include sm;
+}
+
+.FirstPalette-colors {
+  height: 92vh;
+  /*   width: 100%; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.SinglePalette-colors {
+  height: 92vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.SinglePalette-colors > div {
+  width: 50%;
+  height: 20%;
 }
 
 .copy-button {
@@ -416,6 +477,8 @@ a {
   box-shadow: 0 100px 100px rgba(0, 0, 0, 0.3), 0 5px 12px rgba(0, 0, 0, 0.1);
   z-index: 30;
   height: 4.5vh;
+  @include sm;
+  position: relative;
 }
 
 .Footerlogo {
@@ -491,25 +554,25 @@ a {
 
 .PaletteListWrapper {
   width: 100%;
-  height: 91vh;
+  /*   height: 92vh; */
 }
 
 .Palette-Wrapper {
-  height: 100%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  @include sm;
+  height: 100%;
 }
 
 .Minibox {
-  width: 26%;
-  display: inline-block;
+  width: 32%;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
 }
 
 .Minicolor {
@@ -573,12 +636,11 @@ a {
 }
 
 .MiniPalette-Title {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+
+  height: 36px;
   margin-bottom: 10px;
   background: linear-gradient(
     to right,
@@ -601,7 +663,7 @@ a {
   background-size: 400% 100%;
 }
 ////////////////// HOVER EFFECT ///////////
-
+/*
 .Minibox:hover {
   border-radius: 10px;
   animation-name: example;
@@ -610,7 +672,7 @@ a {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   padding: 10px;
 }
-
+ */
 ///////////// ///////////// SinglePaletteList ///////////// ///////////// /////////////
 ///////////// ///////////// ///////////// ///////////// ///////////// /////////////
 
@@ -618,18 +680,3 @@ a {
   width: 100%;
   height: 91vh;
 } */
-
-.SinglePalette-colors {
-  height: 91vh;
-  width: 100%;
-  margin-right: auto;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.SinglePalette-colors > div {
-  width: 50%;
-  height: 20%;
-}

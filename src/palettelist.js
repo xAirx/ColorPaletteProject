@@ -23,7 +23,9 @@ export class Palettelist extends Component {
          */}
         <div className="MiniColorInnerWrapper">
           {palette.colors.map(singlecolor => (
-            <div className="Minicolor" style={{ height: '30px', backgroundColor: singlecolor.color }}></div>
+            <Link to={`/palette/${palette.id}`}>
+              <div className="Minicolor" style={{ height: '30px', backgroundColor: singlecolor.color }}></div>
+            </Link>
           ))}
         </div>
       </div>
@@ -32,15 +34,13 @@ export class Palettelist extends Component {
     /* console.log(mappedPalettes); */
 
     return (
-      <div className="Palette">
+      <div className="SingleColorPalette Palette">
         <Navbar showingAllColors={false} showingFrontPage />
-        <div className="PaletteListWrapper">
-          <div className="Palette-Wrapper">
-            {mappedPalettes}
-            {/*  {palettes.map(palette => (
+        <div className="FirstPalette-colors">
+          {mappedPalettes}
+          {/*  {palettes.map(palette => (
             <miniPalette {...palettes} />
           ))} */}
-          </div>
         </div>
         <Footer />
       </div>
