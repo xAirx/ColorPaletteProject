@@ -24,10 +24,12 @@ class Navbar extends Component {
   }
 
   // / Here we handle the formatchange within the navbarcomponent,
-  // / Based on what is set in the select component below, we wset the state as event target value, the open state also plays in with the snackbar showing or not.
+  // / Based on what is set in the select component below, we set the state as event target value, the open state also plays in with the snackbar showing or not.
   handleFormatChange(e) {
     this.setState({ format: e.target.value, open: true });
     this.props.handleChange(e.target.value);
+    console.log('This is the change', e.target.value);
+    console.log(this.state);
   }
 
   closeSnackbar() {
@@ -35,7 +37,7 @@ class Navbar extends Component {
   }
 
   render() {
-    const { level, changeLevel, showingAllColors, showingFrontpage, showingPalette } = this.props;
+    const { level, changeLevel, handleChange, showingAllColors, showingFrontpage, showingPalette } = this.props;
     const { format } = this.state;
 
     return (
