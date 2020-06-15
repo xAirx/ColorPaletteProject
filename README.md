@@ -1,6 +1,27 @@
 # Colorpaletteproject
 
 
+## Styled components
+
+    React styling and Styled Components
+
+    https://codeburst.io/4-four-ways-to-style-react-components-ac6f323da822
+
+    https://www.sitepoint.com/react-components-styling-options/
+
+    https://medium.com/@jamiedixon/styled-components-production-patterns-c22e24b1d896#.tfxr5bws2
+
+    https://blog.logrocket.com/the-best-styling-in-react-tutorial-youve-ever-seen-676f1284b945/
+
+    https://www.freecodecamp.org/news/a-5-minute-intro-to-styled-components-41f40eb7cd55/
+    
+    
+    
+    Custom grid with styled components
+ 
+            https://medium.com/swlh/create-a-responsive-grid-with-react-flexbox-styled-components-f7a55f607480 -- for codepen.io
+    
+
 ## Storybook integration
 
       Storybook section on onenote
@@ -19,6 +40,8 @@
 ## Unitttesting
 
       Unittesting section on onenote.
+      
+ 
       
  
 ###  Rebuild in custom styled components with bootstrap grid
