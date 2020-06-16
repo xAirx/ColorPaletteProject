@@ -21,7 +21,7 @@
 
 
                
-## TODO: Storybook integration
+## TODO: Storybook integration (Documentation, Component testing) - integration
 
         ### Storybook component testing (Git prehook)
      
