@@ -1,68 +1,67 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Colorpaletteproject
 
-## Available Scripts
 
-In the project directory, you can run:
+## Styled components
 
-### `yarn start`
+    React styling and Styled Components
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    https://codeburst.io/4-four-ways-to-style-react-components-ac6f323da822
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+    https://www.sitepoint.com/react-components-styling-options/
 
-### `yarn test`
+    https://medium.com/@jamiedixon/styled-components-production-patterns-c22e24b1d896#.tfxr5bws2
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    https://blog.logrocket.com/the-best-styling-in-react-tutorial-youve-ever-seen-676f1284b945/
 
-### `yarn build`
+    https://www.freecodecamp.org/news/a-5-minute-intro-to-styled-components-41f40eb7cd55/
+    
+    
+    Custom grid with styled components
+ 
+      https://medium.com/swlh/create-a-responsive-grid-with-react-flexbox-styled-components-f7a55f607480 -- for codepen.io
+    
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Styled Bootstrap
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+        https://github.com/xDae/styled-bootstrap
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+        Custom components with styled-components and integrated with reactstrap
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+        "Ideally you don't really need styled-components when using a framework like reactstrap. Most of your views and components should just be composing reactstrap components to create layouts, pages and other custom components in order to stay within the reactstrap paradigm."
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+        https://www.reddit.com/r/reactjs/comments/7s6fgz/reactstrap_styled_components/
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+        Reactstrap uses bootstrap's CSS just as bootstrap does only recreating the javascript functionality so that it is not jquery making DOM manipulations. styles-bootstrap basically recreates bootstrap entirely, yes that's right, it defines all of the styles and doesn't actually use bootstrap's css or styles.
 
-## Learn More
+        There are advantages to disadvantages to both. 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+        With reactstrap, you have to use bootstrap's css which may mean pulling in unused styles, but you can create a custom build of bootstrap css (per their docs) to only include the component styles you need. 
+        
+        
+        
+        
+## Storybook integration
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+      Storybook section on onenote
 
-### Code Splitting
+      https://www.youtube.com/watch?v=5KOiMYfLB6A
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+      https://scotch.io/tutorials/building-a-ui-component-with-react-and-storybook
 
-### Analyzing the Bundle Size
+      https://www.learnstorybook.com/intro-to-storybook/react/en/get-started/
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+      https://medium.com/storybookjs/migrating-to-storybook-4-c65b19a03d2c
 
-### Making a Progressive Web App
+      https://auth0.com/blog/setting-up-a-component-library-with-react-and-storybook/
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-### Advanced Configuration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-### Deployment
+## Unitttesting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+      Unittesting section on onenote.
+      
+ 
+     
