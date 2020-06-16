@@ -2,28 +2,28 @@
 
 
 
-## Stack:
+## TODO: Stack:
 
 
 
 
 
-## Functionality:
+## TODO:  Functionality:
 
 
 
 
-## CSSGRID with styled components 
+## TODO:  CSSGRID with styled components 
 
-### Redesign.
+### TODO: Redesign.
 
 
                
-## Storybook integration
+## TODO: Storybook integration
 
 
 
-## Unitttesting
+## TODO:  Unitttesting
 
     
       
