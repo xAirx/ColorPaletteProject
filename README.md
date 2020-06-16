@@ -19,7 +19,7 @@
     
     Custom grid with styled components
  
-            https://medium.com/swlh/create-a-responsive-grid-with-react-flexbox-styled-components-f7a55f607480 -- for codepen.io
+      https://medium.com/swlh/create-a-responsive-grid-with-react-flexbox-styled-components-f7a55f607480 -- for codepen.io
     
 
 ## Storybook integration
@@ -42,8 +42,4 @@
       Unittesting section on onenote.
       
  
-      
- 
-###  Rebuild in custom styled components with bootstrap grid
-    
-        https://github.com/xDae/styled-bootstrap <- Learn about the storybook implemenation too.
+     
