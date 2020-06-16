@@ -15,17 +15,13 @@
 
 ## TODO:  CSSGRID with styled components 
 
+
+
 ### TODO: Redesign.
 
 
                
 ## TODO: Storybook integration
 
-
-
-## TODO:  Unitttesting
-
-    
-      
  
      
