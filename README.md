@@ -23,5 +23,5 @@
                
 ## TODO: Storybook integration
 
- 
+        ### Storybook component testing (Git prehook)
      
