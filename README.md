@@ -2,6 +2,17 @@
 
 
 
+## Stack:
+
+
+
+
+
+## Functionality:
+
+
+
+
 ## CSSGRID with styled components 
 
 ### Redesign.
