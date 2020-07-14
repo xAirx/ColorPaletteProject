@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import ColorBox from './ColorBox';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import './component.scss';
+import './css/style.css';
 
 class Palette extends Component {
   constructor(props) {

@@ -5,7 +5,7 @@
 import React, { Component } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { Link } from 'react-router-dom';
-import './component.scss';
+import './css/style.css';
 
 class ColorBox extends Component {
   constructor(props) {

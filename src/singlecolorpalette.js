@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import ColorBox from './ColorBox';
-import './component.scss';
+import './css/style.css';
 
 class SingleColorPalette extends Component {
   constructor(props) {

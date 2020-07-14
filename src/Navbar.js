@@ -8,7 +8,7 @@ import React, { Component } from 'react';
 // / THE ORDER MATTERS.
 import 'rc-slider/assets/index.css';
 import Slider from 'rc-slider';
-import './component.scss';
+import './css/style.css';
 import { Select, MenuItem } from '@material-ui/core';
 import Snackbar from '@material-ui/core/Snackbar';
 import IconButton from '@material-ui/core/IconButton';
